@@ -1,0 +1,15 @@
+## AI change log
+
+- [2025-09-23T00:00:00Z] (workspaceEdit, 4 files) — Scaffold static presentation site (index, styles, script, README); modern responsive design, section navigation, reveal animations; no build step required.
+
+- [2025-09-23T00:00:01Z] index.html — Switch asset paths to relative (./styles.css, ./script.js) to ensure CSS/JS load when opening file directly without a server.
+
+- [2025-09-23T00:00:02Z] styles.css — Add full-screen slide layout with min-height:100svh, scroll-snap, centered content for presentation mode.
+- [2025-09-23T00:00:02Z] script.js — Enhance keyboard navigation: ArrowLeft/ArrowRight/PageUp/PageDown/Home/End to move between full-screen slides.
+
+- [2025-09-23T00:00:03Z] script.js — Add wheel-based slide navigation with cooldown; prevents default page scroll and ignores scrolls inside scrollable elements.
+
+- [2025-09-23T00:00:04Z] styles.css — Make header fixed and adjust slides to min-height: calc(100svh - header), add scroll-padding/scroll-margin for correct offsets while snapping.
+
+- [2025-09-23T00:00:05Z] styles.css — Remove visible focus outline on slide sections (programmatic focus) to hide active line during navigation.
+

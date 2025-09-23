@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Greencity — Website Decision</title>
+    <meta name="description" content="Greencity website decision: Stay on Houzez vs. build Custom (Next.js + Admin + Backend). Modern presentation site." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a7f5a'/%3E%3C/svg%3E" />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#slide-1">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">●</span>
+          <span class="brand-text">Greencity</span>
+        </div>
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#slide-1">Title & Goal</a></li>
+            <li><a href="#slide-2">Summary</a></li>
+            <li><a href="#slide-3">Current State</a></li>
+            <li><a href="#slide-4">Root Causes</a></li>
+            <li><a href="#slide-5">Option A</a></li>
+            <li><a href="#slide-7">Option C</a></li>
+            <li><a href="#slide-8">12-Week Plan</a></li>
+            <li><a href="#slide-11">Risks</a></li>
+            <li><a href="#slide-15">Budget</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+      <!-- Slide 1: Title & Goal -->
+      <section id="slide-1" class="section hero" data-animate>
+        <div class="container">
+          <h1 class="display">Greencity Website Decision</h1>
+          <p class="eyebrow">Stay on Houzez (via agency) vs. Build Custom (Next.js + Admin + Backend)</p>
+          <p class="lead"><strong>Goal:</strong> Choose the option that best supports growth, performance, integrations, and long‑term ROI.</p>
+          <div class="actions">
+            <a class="button primary" href="#slide-2">Learn More</a>
+            <a class="button ghost" href="#slide-15">Jump to Budget</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true"></div>
+      </section>
+
+      <!-- Slide 2: Executive Summary -->
+      <section id="slide-2" class="section" data-animate>
+        <div class="container">
+          <h2>Executive Summary (TL;DR)</h2>
+          <ul class="checklist">
+            <li>We can stabilize the current Houzez stack, but we’ll remain limited by plugins, data model, and performance at scale.</li>
+            <li>The agency proposal rebuilds on the same theme; good for visuals & short‑term fixes, but doesn’t change the underlying constraints.</li>
+            <li><strong>Vitaliy’s proposal:</strong> A custom Next.js + headless CMS + API gives us speed, SEO control, and clean integrations (Monday/CRM/investor portal), with higher upfront work but lower long‑term friction.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 3: Current State -->
+      <section id="slide-3" class="section" data-animate>
+        <div class="container">
+          <h2>Current State (What’s hurting us)</h2>
+          <div class="cards">
+            <div class="card">
+              <ul>
+                <li>Random bugs, occasional crashes, “broken data” requiring DB interventions.</li>
+                <li>Heavy footprint (~160 GB media/plugins/backups) → slow admin & slow pages.</li>
+                <li>Elementor + many plugins → bloat and conflict risk.</li>
+                <li>No real SEO foundation, minimal content, inconsistent imagery/video.</li>
+                <li>Integrations (Monday, CRM, internal DB) are plugin‑limited.</li>
+                <li>Theme/vendor dependency: unclear ownership of long‑term maintenance; migration later could be expensive.</li>
+                <li>Operational overhead: complex builder UI raises risk of editor mistakes and regressions.</li>
+                <li>Security surface: many plugins → more updates, more breakage risk without strict QA.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Additionally (EN)</h3>
+              <ul>
+                <li>Built on a WordPress theme with many plugins (incl. Elementor); much of the functionality is unused yet loads assets — total footprint is ~160 GB (can be reduced dramatically via offloading/cleanup).</li>
+                <li>As the company grows, needed automations/integrations will expand; plugin‑based approaches are often limited for business‑specific logic.</li>
+                <li>The theme requires ongoing vendor support; ownership is unclear. If support lapses, a future migration could be costly.</li>
+              </ul>
+              <p class="impact"><strong>Impact:</strong> Lost trust (errors/latency), poor rankings, slow iteration, high support burden.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Root Causes -->
+      <section id="slide-4" class="section" data-animate>
+        <div class="container">
+          <h2>Root Causes</h2>
+          <div class="grid-2">
+            <ul class="list">
+              <li><strong>Architecture:</strong> Monolithic WP + theme + builder; tight coupling of content, layout, and business logic.</li>
+              <li><strong>Data governance:</strong> Inconsistent post types/fields, legacy content, media not offloaded/CDN‑optimized.</li>
+            </ul>
+            <ul class="list">
+              <li><strong>Performance:</strong> Render blocking builder assets, unoptimized queries, plugin overlap, oversized images.</li>
+              <li><strong>Integrations:</strong> Reliant on generic plugins vs. purpose‑built services/APIs.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Option A -->
+      <section id="slide-5" class="section alt" data-animate>
+        <div class="container">
+          <h2>Option A: Agency Rebuild on Houzez</h2>
+          <div class="grid-2">
+            <div>
+              <h3>What you get</h3>
+              <ul class="list">
+                <li>Reviews, Google Optimization, Awards.</li>
+                <li>Photography and marketing videos scheduled based on web design.</li>
+                <li>Migration of property data.</li>
+                <li>Website development (based on theme); launch + public launch.</li>
+                <li>Team training with pre‑recorded videos on navigating the site backend.</li>
+                <li>Begin local SEO for target state(s).</li>
+                <li>On‑going support for the WordPress website.</li>
+                <li>Content planning for new pages: Location pages, Blogs, Service pages.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Pros</h3>
+              <ul class="pros">
+                <li>Fastest path to a cleaner site.</li>
+                <li>Clear fixed scope & service.</li>
+              </ul>
+              <h3>Cons</h3>
+              <ul class="cons">
+                <li>Underlying theme/builder constraints remain.</li>
+                <li>Future integrations/automation still rely on plugins.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Option C Custom -->
+      <section id="slide-7" class="section" data-animate>
+        <div class="container">
+          <h2>Option C: Custom Next.js + Admin + Backend</h2>
+          <div class="grid-2">
+            <div>
+              <h3>Architecture</h3>
+              <ul class="list">
+                <li>Next.js (SSR/ISR) front‑end for speed & SEO control.</li>
+                <li>Headless CMS (e.g., Strapi, Sanity, Payload, or WordPress‑as‑headless) for content ops.</li>
+                <li>Custom API/DB for listings, communities, programs, and CRM/Monday sync.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Benefits</h3>
+              <ul class="checklist">
+                <li>Faster website experience: Pages load almost instantly, creating a smoother experience for visitors.</li>
+                <li>Better visibility on Google: Built‑in SEO advantages help more people find us online.</li>
+                <li>Fits our needs, not just the theme: We’re free to organize data and features around how our business really works.</li>
+                <li>Easier to connect with our tools: Integrates directly with Monday.com, HubSpot, and our investor portal without workarounds.</li>
+                <li>Smarter marketing: Easier A/B testing and clear analytics to track what performs best.</li>
+                <li>MLS‑ready + map visuals: Import/sync MLS/RESO data and present interactive map‑based unit visuals for communities and listings.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: 12 Week Plan -->
+      <section id="slide-8" class="section alt" data-animate>
+        <div class="container">
+          <h2>What “Custom” Delivers  (Roles Clarified)</h2>
+          <p class="eyebrow">Goal: Make clear who does what (Dev vs. UI/UX vs. Agency/Marketing).</p>
+          <div class="timeline">
+            <div class="timecard">
+              <h3>Phase 1</h3>
+              <p>Design system, sitemap, content model, CMS setup.</p>
+              <p><strong>Owner:</strong> Dev Team + UI/UX Designer for design system + components.</p>
+              <p><strong>Agency (optional):</strong> Brand guidance, legacy asset review.</p>
+            </div>
+            <div class="timecard">
+              <h3>Phase 2</h3>
+              <p>Core pages (Home, Search Homes, Communities, Approach, Financing, Careers, Contact), reusable sections, forms.</p>
+              <p><strong>Owner:</strong> Dev Team (implementation) + UI/UX Designer (UI layouts, component specs).</p>
+              <p><strong>Agency:</strong> N/A (or visual QA only, if engaged).</p>
+            </div>
+            <div class="timecard">
+              <h3>Phase 3</h3>
+              <p>Listings/communities admin, importers (CSV/MLS/RESO feed), Monday/CRM sync MVP.</p>
+              <p><strong>Owner:</strong> Dev Team.</p>
+              <p><strong>UI/UX Designer:</strong> Admin UX flows & empty/error states.</p>
+              <p><strong>Agency:</strong> N/A.</p>
+            </div>
+            <div class="timecard">
+              <h3>Phase 4</h3>
+              <p>Technical SEO/schema implementation, animations framework, QA, redirects, launch.</p>
+              <p><strong>Owner:</strong> Dev Team (technical SEO only).</p>
+              <p><strong>UI/UX Designer:</strong> Motion guidelines & micro‑interactions.</p>
+              <p><strong>Agency/Marketing (optional):</strong> SEO campaign, launch comms.</p>
+            </div>
+          </div>
+          <p class="parallel"><strong>Parallel (Agency/Marketing):</strong> Photo/video production and content writing.</p>
+          <p class="parallel"><strong>Parallel (Dev Team):</strong> Integrate assets, wire into CMS, publish, ensure performance/analytics.</p>
+        </div>
+      </section>
+
+      <!-- Slide 11: Risk Matrix -->
+      <section id="slide-11" class="section" data-animate>
+        <div class="container">
+          <h2>Risk Matrix & Mitigation</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Risk</th>
+                  <th>A: Agency (Houzez)</th>
+                  <th>C: Custom</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Regressions from plugins</td>
+                  <td>High → lock versions</td>
+                  <td>Low → minimal plugins</td>
+                </tr>
+                <tr>
+                  <td>Editor complexity</td>
+                  <td>Medium (Elementor)</td>
+                  <td>Low (components)</td>
+                </tr>
+                <tr>
+                  <td>Integration limits</td>
+                  <td>High (plugin constraints)</td>
+                  <td>Low (first‑class APIs)</td>
+                </tr>
+                <tr>
+                  <td>Launch delay</td>
+                  <td>Low</td>
+                  <td>Medium → staged rollout</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mitigation">Mitigation for C: freeze scope, deliver MVP first, parallel content work, keep legacy site live until cutover.</p>
+        </div>
+      </section>
+
+      <!-- Slide 15: Budget -->
+      <section id="slide-15" class="section alt" data-animate>
+        <div class="container">
+          <h2>Budget (Agency vs Custom)</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Agency</h3>
+              <ul class="list">
+                <li>we will get for 4 month</li>
+                <li><strong>One-time website build:</strong> $15,600</li>
+              </ul>
+              <h4>Optional add-ons</h4>
+              <ul class="list">
+                <li>Local SEO: $547/month/location</li>
+                <li>Maintenance: $447/month</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Custom Solution</h3>
+              <ul class="list">
+                <li><strong>One-time website build:</strong> $15,600</li>
+              </ul>
+              <h4>Optional add-ons</h4>
+              <ul class="list">
+                <li>SEO on us — internal or combined with agency</li>
+                <li>Maintenance support — internal (Illya and Vitaliy)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Vitaliy. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+
+
