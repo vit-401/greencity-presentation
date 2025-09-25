@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Decorative landscape">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2db783"/>
+      <stop offset="100%" stop-color="#1a7f5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="none"/>
+  <!-- distant hills -->
+  <path d="M0 290 C120 240 220 240 360 290 C480 330 630 300 760 280 C920 255 1040 280 1200 310 L1200 420 L0 420 Z" fill="#184e3a" opacity="0.32"/>
+  <!-- mid hills -->
+  <path d="M0 310 C140 270 260 300 420 330 C580 360 740 330 900 320 C1020 312 1110 335 1200 360 L1200 420 L0 420 Z" fill="#206e52" opacity="0.38"/>
+  <!-- near hills -->
+  <path d="M0 340 C160 330 300 360 480 380 C700 410 900 380 1200 370 L1200 420 L0 420 Z" fill="url(#g1)" opacity="0.45"/>
+  <!-- trees -->
+  <g fill="#0f2d22" opacity="0.5">
+    <circle cx="100" cy="320" r="26"/>
+    <rect x="95" y="320" width="10" height="28" rx="2"/>
+    <circle cx="220" cy="300" r="32"/>
+    <rect x="215" y="300" width="10" height="40" rx="2"/>
+    <circle cx="340" cy="310" r="24"/>
+    <rect x="335" y="310" width="10" height="28" rx="2"/>
+    <circle cx="540" cy="320" r="30"/>
+    <rect x="535" y="320" width="10" height="34" rx="2"/>
+    <circle cx="680" cy="300" r="28"/>
+    <rect x="675" y="300" width="10" height="34" rx="2"/>
+    <circle cx="860" cy="315" r="26"/>
+    <rect x="855" y="315" width="10" height="30" rx="2"/>
+    <circle cx="1040" cy="305" r="30"/>
+    <rect x="1035" y="305" width="10" height="36" rx="2"/>
+  </g>
+</svg>

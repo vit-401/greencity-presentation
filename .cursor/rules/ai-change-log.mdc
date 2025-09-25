@@ -13,3 +13,22 @@
 
 - [2025-09-23T00:00:05Z] styles.css — Remove visible focus outline on slide sections (programmatic focus) to hide active line during navigation.
 
+- [2025-09-25T00:00:00Z] index.html — Rewrite content to non-technical language, surface timeline (~2–3 months) and budget (~$3.5k–$5k) in hero, restructure sections: status/problems, conclusion, agency vs custom, workflow & timeline, and budget.
+
+- [2025-09-25T00:00:01Z] index.html — Remove Slide 2 (Executive Summary); update nav and hero CTA to reference existing sections to avoid broken #slide-2 link.
+
+- [2025-09-25T00:00:02Z] index.html — Add AOS via CDN and annotate headings, grids, cards, and timeline items with data-aos for tasteful staggered animations.
+- [2025-09-25T00:00:02Z] script.js — Initialize AOS with once:true, easing, duration, and offset; guard if AOS unavailable.
+
+- [2025-09-25T00:00:03Z] (workspaceEdit, 3 files) — Add hero parallax: new SVG asset, load simpleParallax via CDN, position image in hero, initialize library with scale 1.3/up orientation and delay; subtle depth without layout shift.
+
+- [2025-09-25T00:00:04Z] (workspaceEdit, 3 files) — Swap hero parallax to assets/Group 163064.jpg; adjust CSS sizing and simpleParallax settings (scale 1.6, up-right, delay .8) for smoother, deeper motion.
+
+- [2025-09-25T00:00:05Z] index.html, styles.css — Right-align hero parallax image using grid wrapper; remove Risk Matrix section and nav item to simplify presentation.
+
+- [2025-09-25T00:00:06Z] (workspaceEdit, 3 files) — Replace parallax hero with static layout; remove simpleParallax assets, rebuild hero grid with copy/image split, adjust CSS for responsive media.
+
+- [2025-09-25T00:00:07Z] script.js, styles.css — Allow AOS animations to replay (once:false); add mobile spacing, typography, and button tweaks for <600px screens.
+
+- [2025-09-25T00:00:08Z] styles.css — Center section content on small screens and narrow container padding so mobile layout stays centered while lists remain readable.
+

@@ -103,6 +103,20 @@
   if (location.hash) {
     setTimeout(() => focusSection(location.hash), 50);
   }
+
+  // Initialize AOS (Animate On Scroll) if available
+  try {
+    if (window.AOS && typeof window.AOS.init === 'function') {
+      window.AOS.init({
+        once: false,
+        duration: 600,
+        easing: 'ease-out-cubic',
+        offset: 40,
+      });
+    }
+  } catch (_) {
+    // no-op if AOS not present
+  }
 })();
 
 
